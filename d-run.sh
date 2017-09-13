@@ -5,10 +5,6 @@ source ./settings/bld.sh
 source ./settings/run.sh
 source ./settings/volumes.sh
 
-echo "==============="
-echo "Info:           Connect to 192.168.2.8 in browser"
-echo "==============="
-
 # inspiration: https://stackoverflow.com/questions/38576337/execute-bash-command-if-docker-container-does-not-exist
 #
 if [ ! "$(docker ps -q -f name=$my_container_name)" ]; then
@@ -22,6 +18,5 @@ if [ ! "$(docker ps -q -f name=$my_container_name)" ]; then
     docker run -it \
 	  --name $my_container_name \
 	  -v $MY_MYSQL_DATA_VOLUME:/var/lib/mysql \
-	  -p 80:80 \
 	  $my_build_name
 fi

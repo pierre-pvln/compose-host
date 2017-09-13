@@ -6,7 +6,7 @@ if [ ! -d "$MY_MYSQL_DATA_VOLUME" ]; then
   mkdir -p $MY_MYSQL_DATA_VOLUME
 fi
 echo "==============="
-echo "mysql data volume: " $MY_MYSQL_DATA_VOLUME
+echo "MySQL data volume: " $MY_MYSQL_DATA_VOLUME
 echo "==============="
 
 MY_FTP_DATA_VOLUME='/home/pi/docker/mysql-tst/storage/ftp'
@@ -16,6 +16,6 @@ if [ ! -d "$MY_FTP_DATA_VOLUME" ]; then
 fi
 
 echo "==============="
-echo "mysql data volume: " $MY_FTP_DATA_VOLUME
+echo "FTP data volume: " $MY_FTP_DATA_VOLUME
 echo "==============="
 
