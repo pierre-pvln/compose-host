@@ -1,3 +1,4 @@
-docker-compose up --project-directory ../container
+source ./settings/volumes.sh
 
+docker-compose up
 
