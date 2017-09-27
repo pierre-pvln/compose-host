@@ -1,5 +1,7 @@
 source ./settings/volumes.sh
-env
 
-docker-compose config --volumes --services 
+docker-compose --project-name mysql-tst-project --file ../integrations/pvln.nl.yml config --services --volumes
+
+
+
 

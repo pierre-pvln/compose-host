@@ -8,4 +8,4 @@ source ./settings/bld.sh
 source ./settings/mysql.sh
 
 # use environment variables during build
-docker build --tag $my_build_name --build-arg MY_MYSQL_SERVER_ROOT_PASSWORD=$my_mysql_root_pw ../container/
+docker build --tag $my_build_name --build-arg MY_MYSQL_SERVER_ROOT_PASSWORD=$my_mysql_root_pw ../services/mysql_5.5

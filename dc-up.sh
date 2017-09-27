@@ -1,4 +1,3 @@
 source ./settings/volumes.sh
 
-docker-compose up
-
+docker-compose --project-name pvln-project --file ../integrations/pvln.nl.yml up
