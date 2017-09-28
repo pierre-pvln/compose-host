@@ -1,1 +1,2 @@
-Configs en scripts dockerhost for mysql-tst 
+Configs en scripts for docker and docker-compose for various integrations
+ 
