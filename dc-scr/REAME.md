@@ -1,2 +1,2 @@
 
-Generic scripts for docker-compose 
+Generic scripts for docker-compose

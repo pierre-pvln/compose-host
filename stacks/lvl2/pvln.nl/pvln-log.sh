@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# - _ and . are ignored
-export MY_PROJECT_NAME="pvlnserver"
-export MY_YAML_FILE="pvln.nl.yml"
+source ./settings.sh
 
-source ./dc-log.sh
+source ../../../dc-scr/dc-log.sh

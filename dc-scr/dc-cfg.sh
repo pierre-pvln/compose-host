@@ -3,15 +3,11 @@
 # Required environment variables:
 #    ${MY_PROJECT_NAME} = the name of the project 
 #    ${MY_YAML_FILE}    = path to the YAML file including YAML file name
+#    ${MY_LEVEL}        = the level of the stack/integration (lvl1, lvl2, lvl3)
 
-# Check the input 
-# If not available, default settings are used
-#
-#
-
-source ./settings/volumes.sh
-source ./settings/platform.sh
+echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../../../stacks/${MY_LEVEL}/${MY_YAML_FILE} config --services --volumes
 
 docker-compose --project-name ${MY_PROJECT_NAME} \
-               --file ../integrations/${MY_YAML_FILE} \
+               --file ../../../../stacks/${MY_LEVEL}/${MY_YAML_FILE} \
                config --services --volumes
+			   
