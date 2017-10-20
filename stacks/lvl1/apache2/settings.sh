@@ -17,5 +17,3 @@ if [ ! -d "$MY_WEB_DATA_VOLUME" ]; then
   # Will enter here if the $MY_MYSQL_DATA_VOLUME doesn't exist.
   mkdir -p $MY_WEB_DATA_VOLUME
 fi
-
-
