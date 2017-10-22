@@ -8,14 +8,25 @@
 # Required specific environment variables:
 #    ${MY_APACHE2_SERVERNAME} = de servername for the server (NOT USED YET)
 #    ${MY_APACHE2_SITENAME} = sitename for the server -> is location of websever files
-[[ -z "${MY_APACHE2_SITENAME}" ]] && MY_APACHE2_SITENAME="html"
+#[[ -z "${MY_APACHE2_SITENAME}" ]] && MY_APACHE2_SITENAME="html"
 
 
-echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} build --build-arg MY_APACHE2_SERVERNAME=${MY_APACHE2_SERVERNAME} --build-arg MY_APACHE2_SITENAME=${MY_APACHE2_SITENAME}
+### echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} build --build-arg MY_APACHE2_SERVERNAME=${MY_APACHE2_SERVERNAME} --build-arg MY_APACHE2_SITENAME=${MY_APACHE2_SITENAME}
+
+###docker-compose --project-name ${MY_PROJECT_NAME} \
+###               --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} \
+###               build \
+###			   --build-arg MY_APACHE2_SERVERNAME=${MY_APACHE2_SERVERNAME} \
+###			   --build-arg MY_APACHE2_SITENAME=${MY_APACHE2_SITENAME}
+
+echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} build
 
 docker-compose --project-name ${MY_PROJECT_NAME} \
                --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} \
-               build \
-			   --build-arg MY_APACHE2_SERVERNAME=${MY_APACHE2_SERVERNAME} \
-			   --build-arg MY_APACHE2_SITENAME=${MY_APACHE2_SITENAME}
-	   
+               build
+
+
+
+
+
+
