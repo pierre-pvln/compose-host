@@ -11,7 +11,7 @@ export MY_LEVEL="lvl1"
 #
 # Required specific variables for apache2
 #
-# export MY_APACHE2_SITENAME="test"
+export MY_APACHE2_SITENAME="test"
 
 
 # Required data volumes on host machine
@@ -19,8 +19,10 @@ export MY_LEVEL="lvl1"
 # Should map to a specific folder of the host.
 # ./ or ../ are not allowed
 #
-export MY_WEB_DATA_VOLUME="/home/pi/docker/compose/storage/www"
+export MY_WEB_DATA_VOLUME="/home/pi/docker/compose/storage/www/${MY_APACHE2_SITENAME}"
+echo ${MY_WEB_DATA_VOLUME}
+
 if [ ! -d "$MY_WEB_DATA_VOLUME" ]; then
   # Will enter here if the $MY_MYSQL_DATA_VOLUME doesn't exist.
-  mkdir -p $MY_WEB_DATA_VOLUME
+  mkdir -p ${MY_WEB_DATA_VOLUME}
 fi
