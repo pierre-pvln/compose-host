@@ -9,7 +9,7 @@ export MY_PLATFORM="rpi2"
 export MY_LEVEL="lvl1"
 
 #
-# Required specific variables for apache2
+# Required specific variables for apache2 container
 #
 #export MY_APACHE2_SITENAME="testsite"
 #export MY_APACHE2_SERVERNAME="testservername"

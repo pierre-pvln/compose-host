@@ -8,7 +8,8 @@ export MY_YAML_FILE="baseline.yml"
 export MY_PLATFORM="rpi2"
 export MY_LEVEL="lvl1"
 
-# Required Data volumes
+# Required data volumes on host machine
+# =====================================
 # Should map to a specific folder of the host.
 # ./ or ../ are not allowed
 #
