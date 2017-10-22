@@ -11,8 +11,8 @@ export MY_LEVEL="lvl1"
 #
 # Required specific variables for apache2
 #
-export MY_APACHE2_SITENAME="testsite"
-export MY_APACHE2_SERVERNAME="testservername"
+#export MY_APACHE2_SITENAME="testsite"
+#export MY_APACHE2_SERVERNAME="testservername"
 
 # Required data volumes on host machine
 # =====================================
