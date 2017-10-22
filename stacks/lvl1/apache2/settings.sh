@@ -8,6 +8,12 @@ export MY_YAML_FILE="apache2-tst.yml"
 export MY_PLATFORM="rpi2"
 export MY_LEVEL="lvl1"
 
+#
+# Required specific variables for apache2
+#
+# export MY_APACHE2_SITENAME="test"
+
+
 # Required data volumes on host machine
 # =====================================
 # Should map to a specific folder of the host.
