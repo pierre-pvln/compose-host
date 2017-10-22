@@ -7,9 +7,9 @@
 
 source ./defaults.sh
 
-echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../../../stacks/${MY_LEVEL}/${MY_YAML_FILE} config --services --volumes
+echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} config --services --volumes
 
 docker-compose --project-name ${MY_PROJECT_NAME} \
-               --file ../../../../stacks/${MY_LEVEL}/${MY_YAML_FILE} \
+               --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} \
                config --services --volumes
 			   

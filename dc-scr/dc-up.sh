@@ -7,9 +7,9 @@
 
 source ./defaults.sh
 
-echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../../../stacks/${MY_LEVEL}/${MY_YAML_FILE} up
+echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} up
 
 docker-compose --project-name ${MY_PROJECT_NAME} \
-               --file ../../../../stacks/${MY_LEVEL}/${MY_YAML_FILE} \
+               --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} \
                up
 	
