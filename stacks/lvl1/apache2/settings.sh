@@ -9,6 +9,7 @@ export MY_PLATFORM="rpi2"
 export MY_LEVEL="lvl1"
 
 # Required Data volumes
+# =====================
 # Should map to a specific folder of the host.
 # ./ or ../ are not allowed
 #
