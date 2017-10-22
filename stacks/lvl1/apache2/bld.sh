@@ -6,8 +6,13 @@ MY_WORKDIR=${PWD}
 # set the required settings for the host
 source ./settings.sh
 
-# copy the enevironment settings for the container to build directory
-cp .env ../../../dc-scr
+# if an .env file exist in teh container build environment, delete it to prevent using wrong/old environment settings
+[ -f ../../../dc-scr/.env ] && rm ../../../dc-scr/.env
+
+# copy the environment settings for the container to build directory file .env if the environtment file exists
+[ -f environment ] && cp environment ../../../dc-scr/.env
+
+#cp .env ../../../dc-scr
 
 # go the folder of the  actual build script and run it
 cd ../../../dc-scr
