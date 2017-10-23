@@ -19,7 +19,7 @@
 ###			   --build-arg MY_APACHE2_SERVERNAME=${MY_APACHE2_SERVERNAME} \
 ###			   --build-arg MY_APACHE2_SITENAME=${MY_APACHE2_SITENAME}
 
-echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} build
+echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} build --no-cache
 
 docker-compose --project-name ${MY_PROJECT_NAME} \
                --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} \

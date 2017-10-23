@@ -11,8 +11,8 @@ export MY_LEVEL="lvl1"
 #
 # Required specific variables for apache2 container
 #
-export MY_APACHE2_SITENAME="mysite"
-export MY_APACHE2_SERVERNAME="myservername"
+export MY_APACHE2_WEBFOLDER="mysite"
+#export MY_APACHE2_SERVERNAME="myservername"
 
 #
 # Write these settings to file
@@ -30,7 +30,7 @@ export MY_APACHE2_SERVERNAME="myservername"
 # Should map to a specific folder of the host.
 # ./ or ../ are not allowed
 #
-export MY_WEB_DATA_VOLUME="/home/pi/docker/compose/storage/www/${MY_APACHE2_SITENAME}"
+export MY_WEB_DATA_VOLUME="/home/pi/docker/compose/storage/www/${MY_APACHE2_WEBFOLDER}"
 
 if [ ! -d "$MY_WEB_DATA_VOLUME" ]; then
   # Will enter here if the $MY_WEB_DATA_VOLUME doesn't exist, even if it contains spaces.
