@@ -19,14 +19,14 @@
 ###			   --build-arg MY_APACHE2_SERVERNAME=${MY_APACHE2_SERVERNAME} \
 ###			   --build-arg MY_APACHE2_SITENAME=${MY_APACHE2_SITENAME}
 
+#
+# build options
+#
+# --no-cache: Do not use cache when building the image
+# --force-rm: Remove intermediate containers after a successful build
+
 echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} build --no-cache
 
 docker-compose --project-name ${MY_PROJECT_NAME} \
                --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} \
                build --no-cache
-
-
-
-
-
-
