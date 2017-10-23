@@ -11,13 +11,13 @@ export MY_LEVEL="lvl1"
 #
 # Required specific variables for apache2 container
 #
-export MY_APACHE2_SITENAME="testsite"
-export MY_APACHE2_SERVERNAME="testservername"
+export MY_APACHE2_SITENAME="mysite"
+export MY_APACHE2_SERVERNAME="myservername"
 
 #
 # Write these settings to file
 #
-rm environment
+#rm environment
 #echo \# >environment
 #echo \# Required specific variables for apache2 >>environment
 #echo \# >>environment
@@ -33,6 +33,7 @@ rm environment
 export MY_WEB_DATA_VOLUME="/home/pi/docker/compose/storage/www/${MY_APACHE2_SITENAME}"
 
 if [ ! -d "$MY_WEB_DATA_VOLUME" ]; then
-  # Will enter here if the $MY_MYSQL_DATA_VOLUME doesn't exist.
-  mkdir -p ${MY_WEB_DATA_VOLUME}
+  # Will enter here if the $MY_WEB_DATA_VOLUME doesn't exist, even if it contains spaces.
+  mkdir -p "$MY_WEB_DATA_VOLUME"
 fi
+

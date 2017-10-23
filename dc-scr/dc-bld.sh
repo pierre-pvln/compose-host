@@ -23,7 +23,7 @@ echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../stacks/${MY_L
 
 docker-compose --project-name ${MY_PROJECT_NAME} \
                --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} \
-               build
+               build --no-cache
 
 
 
