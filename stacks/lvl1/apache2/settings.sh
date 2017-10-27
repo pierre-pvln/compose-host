@@ -2,9 +2,9 @@
 
 # Required generic variables
 #
-# - _ and . in the variable are ignored
-export MY_PROJECT_NAME="dev_apache2"
-export MY_YAML_FILE="apache2-tst.yml"
+# DO NOT USE: - _ and . in the variablename are ignored
+export MY_PROJECT_NAME="devapache2"
+export MY_YAML_FILE="apache2.yml"
 export MY_PLATFORM="rpi2"
 export MY_LEVEL="lvl1"
 
