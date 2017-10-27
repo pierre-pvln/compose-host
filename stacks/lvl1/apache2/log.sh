@@ -3,7 +3,7 @@
 # set current directory to a var
 MY_WORKDIR=${PWD}
 
-# set the required settings
+# set the required settings for the stack
 source ./settings.sh
 
 # go the folder of the  actual build script and run it
