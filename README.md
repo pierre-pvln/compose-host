@@ -16,3 +16,39 @@ a_folder\dev_scripts command/batch files to interact with docker host
         \services    folder with the various configurations of services    
 		\stacks      folder with the docker compose yaml files
 		\storage     not used yet
+
+run the script on docker host
+
+# TODO: check if git is installed
+# if not installed
+git config --global user.name Pierre Veelen
+git config --global user.email pierre@pvln.nl
+git config --global color.ui auto
+
+mkdir -p ~/docker/on_host
+cd ~/docker/on_host
+git init
+git @@@@@ connect the origin / master to remote git repository
+git pull origin master
+
+mkdir -p ~/docker/services
+cd ~/docker/on_host
+git init
+git @@@@@ connect the origin / master to remote git repository
+git pull origin master
+
+
+mkdir -p ~/docker/stacks
+cd ~/docker/on_host
+git init
+git @@@@@ connect the origin / master to remote git repository
+git pull origin master
+
+
+mkdir -p ~/docker/storage
+cd ~/docker/on_host
+git init
+git @@@@@ connect the origin / master to remote git repository
+git pull origin master
+
+
