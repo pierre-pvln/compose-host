@@ -37,25 +37,37 @@ git config --global color.ui auto
 mkdir -p ~/myDocker/on_host
 cd ~/myDocker/on_host
 git init
-git @@@@@ connect the origin / master to remote git repository
+# Set remote
+git remote set-url origin git@github.com:pierre-pvln/compose-host.git
+# Verify new remote
+git remote -v
 git pull origin master
 
 mkdir -p ~/myDocker/services
 cd ~/myDocker/on_host
 git init
-git @@@@@ connect the origin / master to remote git repository
+# Set remote
+git remote set-url origin git@github.com:pierre-pvln/compose-services.git
+# Verify new remote
+git remote -v
 git pull origin master
 
 mkdir -p ~/myDocker/stacks
 cd ~/myDocker/on_host
 git init
-git @@@@@ connect the origin / master to remote git repository
+# Set remote
+git remote set-url origin git@github.com:pierre-pvln/compose-stacks.git
+# Verify new remote
+git remote -v
 git pull origin master
 
 mkdir -p ~/myDocker/storage
 cd ~/myDocker/on_host
 git init
-git @@@@@ connect the origin / master to remote git repository
+# Set remote
+git remote set-url origin git@github.com:pierre-pvln/compose-storage.git
+# Verify new remote
+git remote -v
 git pull origin master
 
 ````
