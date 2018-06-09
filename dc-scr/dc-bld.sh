@@ -27,6 +27,8 @@
 
 pwd
 
+ls ../../stacks/${MY_LEVEL}/${MY_YAML_FILE}
+
 echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} build --no-cache
 
 docker-compose --project-name ${MY_PROJECT_NAME} \
