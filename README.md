@@ -51,6 +51,8 @@ git remote add origin git@github.com:pierre-pvln/compose-host.git
 # Verify new remote
 git remote -v
 git pull origin master
+#set execute bit for all *.sh files
+find . -name '*.sh' -type f | xargs chmod +x
 
 mkdir -p ~/myDocker/services
 cd ~/myDocker/services
@@ -60,6 +62,8 @@ git remote add origin git@github.com:pierre-pvln/compose-services.git
 # Verify new remote
 git remote -v
 git pull origin master
+#set execute bit for all *.sh files
+find . -name '*.sh' -type f | xargs chmod +x
 
 mkdir -p ~/myDocker/stacks
 cd ~/myDocker/stacks
@@ -69,6 +73,8 @@ git remote add origin git@github.com:pierre-pvln/compose-stacks.git
 # Verify new remote
 git remote -v
 git pull origin master
+#set execute bit for all *.sh files
+find . -name '*.sh' -type f | xargs chmod +x
 
 mkdir -p ~/myDocker/storage
 cd ~/myDocker/storage
@@ -78,4 +84,6 @@ git remote add origin git@github.com:pierre-pvln/compose-storage.git
 # Verify new remote
 git remote -v
 git pull origin master
+#set execute bit for all *.sh files
+find . -name '*.sh' -type f | xargs chmod +x
 ```
