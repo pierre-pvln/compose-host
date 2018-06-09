@@ -19,10 +19,9 @@ a_folder\dev_scripts command/batch files to interact with docker host
 
 run the script on docker host
 
-TODO: check if git is installed
-if not installed
-
 ```shell
+# TODO: check if git is already installed
+#       if not installed then
 git config --global user.name Pierre Veelen
 git config --global user.email pierre@pvln.nl
 git config --global color.ui auto
