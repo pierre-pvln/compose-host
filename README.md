@@ -1,6 +1,7 @@
 Configs en scripts for docker and docker-compose on dockerhost for various integrations and stacks
 
 dc-xxx = docker-compose shell script
+
 d-xxx  = docker shell script
 
 Below folder structure should be present on the host which runs docker:
