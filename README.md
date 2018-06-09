@@ -17,14 +17,17 @@ a_folder\dev_scripts command/batch files to interact with docker host
 		\stacks      folder with the docker compose yaml files
 		\storage     not used yet
 
-run the script on docker host
+## run the script on docker host
 
 ```shell
 # TODO: check if git is already installed
 #       if not installed then
+
 git config --global user.name Pierre Veelen
 git config --global user.email pierre@pvln.nl
 git config --global color.ui auto
+
+#       otherwise start here
 
 mkdir -p ~/myDocker/on_host
 cd ~/myDocker/on_host
