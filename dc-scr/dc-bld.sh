@@ -25,6 +25,8 @@
 # --no-cache: Do not use cache when building the image
 # --force-rm: Remove intermediate containers after a successful build
 
+pwd
+
 echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} build --no-cache
 
 docker-compose --project-name ${MY_PROJECT_NAME} \
