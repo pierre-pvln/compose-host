@@ -14,4 +14,4 @@ source ./settings/bld.sh
 source ./settings/mysql.sh
 source ./settings/platform.sh
 source ./settings/run.sh
-source ./settings/volumas.sh
+source ./settings/volumes.sh
