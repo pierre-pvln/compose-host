@@ -6,7 +6,7 @@ d-xxx  = docker shell script
 
 Below folder structure should be present on the host which runs docker:
 ```
-a_folder\on_host     shell scripts to build and run the docker configurations
+a_folder\on_host     shell scripts to build and run the docker configurations (YOU SHOULD BE HERE)
         \services    folder with the various configurations of services
         \stacks      folder with the docker compose yaml files
         \storage     not used yet
@@ -16,7 +16,7 @@ Below folder structure should be present on the workstation on which development
 ```
 a_folder\dev_scripts command/batch files to interact with docker host
         \secrets     secrets not to be put on github
-        \on_host     shell scripts to build and run the docker configurations
+        \on_host     shell scripts to build and run the docker configurations (OR YOU SHOULD BE HERE)
         \services    folder with the various configurations of services    
         \stacks      folder with the docker compose yaml files
         \storage     not used yet
@@ -25,6 +25,16 @@ a_folder\dev_scripts command/batch files to interact with docker host
 ## run the script on docker host
 
 ```shell
+# TODO: Check if SSH key exists
+#       if not create one
+#  
+# add option to use std output file names and not ask for confirmation
+# add option to not ask for passphrase
+
+ssh-keygen -t rsa -b 4096 -C "pierre@pvln.nl"
+
+# add generated ssh key to github account
+
 # TODO: check if git is already installed
 #       if not installed then
 
@@ -38,36 +48,35 @@ mkdir -p ~/myDocker/on_host
 cd ~/myDocker/on_host
 git init
 # Set remote
-git remote set-url origin git@github.com:pierre-pvln/compose-host.git
+git remote add origin git@github.com:pierre-pvln/compose-host.git
 # Verify new remote
 git remote -v
 git pull origin master
 
 mkdir -p ~/myDocker/services
-cd ~/myDocker/on_host
+cd ~/myDocker/services
 git init
 # Set remote
-git remote set-url origin git@github.com:pierre-pvln/compose-services.git
+git remote add origin git@github.com:pierre-pvln/compose-services.git
 # Verify new remote
 git remote -v
 git pull origin master
 
 mkdir -p ~/myDocker/stacks
-cd ~/myDocker/on_host
+cd ~/myDocker/stacks
 git init
 # Set remote
-git remote set-url origin git@github.com:pierre-pvln/compose-stacks.git
+git remote add origin git@github.com:pierre-pvln/compose-stacks.git
 # Verify new remote
 git remote -v
 git pull origin master
 
 mkdir -p ~/myDocker/storage
-cd ~/myDocker/on_host
+cd ~/myDocker/storage
 git init
 # Set remote
-git remote set-url origin git@github.com:pierre-pvln/compose-storage.git
+git remote add origin git@github.com:pierre-pvln/compose-storage.git
 # Verify new remote
 git remote -v
 git pull origin master
-
-````
+```
