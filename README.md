@@ -26,28 +26,28 @@ if not installed
 `git config --global user.email pierre@pvln.nl
 `git config --global color.ui auto
 
-`mkdir -p ~/docker/on_host
-`cd ~/docker/on_host
+`mkdir -p ~/myDocker/on_host
+`cd ~/myDocker/on_host
 `git init
 `git @@@@@ connect the origin / master to remote git repository
 `git pull origin master
 
-`mkdir -p ~/docker/services
-`cd ~/docker/on_host
-`git init
-`git @@@@@ connect the origin / master to remote git repository
-`git pull origin master
-
-
-`mkdir -p ~/docker/stacks
-`cd ~/docker/on_host
+`mkdir -p ~/myDocker/services
+`cd ~/myDocker/on_host
 `git init
 `git @@@@@ connect the origin / master to remote git repository
 `git pull origin master
 
 
-`mkdir -p ~/docker/storage
-`cd ~/docker/on_host
+`mkdir -p ~/myDocker/stacks
+`cd ~/myDocker/on_host
+`git init
+`git @@@@@ connect the origin / master to remote git repository
+`git pull origin master
+
+
+`mkdir -p ~/myDocker/storage
+`cd ~/myDocker/on_host
 `git init
 `git @@@@@ connect the origin / master to remote git repository
 `git pull origin master
