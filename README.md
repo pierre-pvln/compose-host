@@ -46,7 +46,6 @@ git config --global color.ui auto
 
 mkdir -p ~/myDocker/on_host
 cd ~/myDocker/on_host
-git init
 # Set remote
 git remote add origin git@github.com:pierre-pvln/compose-host.git
 # Verify new remote
