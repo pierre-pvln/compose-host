@@ -1,5 +1,7 @@
 #!/bin/bash
-my_container_name='mysql-tst'
+
+export MY_CONTAINER_NAME='mysql'
+
 echo "==============="
-echo "Containername: " $my_container_name
+echo "Containername: " $MY_CONTAINER_NAME
 echo "==============="

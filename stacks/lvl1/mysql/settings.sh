@@ -2,20 +2,15 @@
 
 # Required generic variables
 #
-# - _ and . in the variable are ignored
-export MY_PROJECT_NAME="dev_mysql"
-export MY_YAML_FILE="mysql-tst.yml"
-export MY_PLATFORM="rpi2"
-export MY_LEVEL="lvl1"
+# IMPORTANT: - _ and . in the variable name are ignored so don't use them
 
-# Required Data volumes
-# Should map to a specific folder of the host.
-# ./ or ../ are not allowed
-#
-export MY_MYSQL_DATA_VOLUME="/home/pi/docker/compose/storage/$MY_PROJECT_NAME/mysql"
-if [ ! -d "$MY_MYSQL_DATA_VOLUME" ]; then
-  # Will enter here if the $MY_MYSQL_DATA_VOLUME doesn't exist.
-  mkdir -p $MY_MYSQL_DATA_VOLUME
-fi
+export MY_PROJECT_NAME="devmysql"
+export MY_YAML_FILE="mysql.yml"
 
+source ./settings/builder.sh
+source ./settings/mysql.sh
+source ./settings/platform.sh
+source ./settings/run.sh
+source ./settings/volumes.sh
+source ./settings/level.sh
 

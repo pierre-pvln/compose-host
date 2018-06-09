@@ -1,5 +1,7 @@
 #!/bin/bash
-my_container_name='apache2-tst'
+
+export MY_CONTAINER_NAME='php5'
+
 echo "==============="
-echo "Containername: " $my_container_name
+echo "Containername: " $MY_CONTAINER_NAME
 echo "==============="

@@ -2,21 +2,14 @@
 
 # Required generic variables
 #
-# DO NOT USE: - _ and . in the variablename are ignored
+# IMPORTANT: - _ and . in the variable name are ignored so don't use them
+
 export MY_PROJECT_NAME="devphp5"
 export MY_YAML_FILE="php5.yml"
-export MY_PLATFORM="rpi2"
-export MY_LEVEL="lvl1"
 
-# Required data volumes on host machine
-# =====================================
-# Should map to a specific folder of the host.
-# ./ or ../ are not allowed
-#
-export MY_WEB_DATA_VOLUME="/home/pi/docker/compose/storage/$MY_PROJECT_NAME/html"
-
-if [ ! -d "$MY_WEB_DATA_VOLUME" ]; then
-  # Will enter here if the $MY_WEB_DATA_VOLUME doesn't exist, even if it contains spaces.
-  mkdir -p "$MY_WEB_DATA_VOLUME"
-fi
-
+source ./settings/builder.sh
+source ./settings/mysql.sh
+source ./settings/platform.sh
+source ./settings/run.sh
+source ./settings/volumes.sh
+source ./settings/level.sh

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Required data volumes on host machine
+# =====================================
+# Should map to a specific folder of the host.
+# ./ or ../ are not allowed
+
 export MY_MYSQL_DATA_VOLUME='/home/pi/docker/compose/storage/mysql'
 if [ ! -d "$MY_MYSQL_DATA_VOLUME" ]; then
   # Will enter here if $MY_MYSQL_DATA_VOLUME doesn't exist.

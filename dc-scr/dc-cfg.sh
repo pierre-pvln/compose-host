@@ -6,23 +6,23 @@
 #    ${MY_LEVEL}        = the level of the stack/integration (lvl1, lvl2, lvl3)
 
 echo ==== ${MY_YAML_FILE} ====
-echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} config
+echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../../../integrations/stacks/${MY_LEVEL}/${MY_YAML_FILE} config
 
 docker-compose --project-name ${MY_PROJECT_NAME} \
-               --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} \
+               --file ../../../../integrations/${MY_LEVEL}/${MY_YAML_FILE} \
                config
 
 echo ==== SERVICES ====
-echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} config --services
+echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../../../integrations/${MY_LEVEL}/${MY_YAML_FILE} config --services
 
 docker-compose --project-name ${MY_PROJECT_NAME} \
-               --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} \
+               --file ../../../../integrations/${MY_LEVEL}/${MY_YAML_FILE} \
                config --services
 
 echo ==== VOLUMES ====
-echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} config --volumes
+echo docker-compose --project-name ${MY_PROJECT_NAME} --file .../../../../integrations/${MY_LEVEL}/${MY_YAML_FILE} config --volumes
 
 docker-compose --project-name ${MY_PROJECT_NAME} \
-               --file ../../stacks/${MY_LEVEL}/${MY_YAML_FILE} \
+               --file ../../../../integrations/${MY_LEVEL}/${MY_YAML_FILE} \
                config --volumes
 

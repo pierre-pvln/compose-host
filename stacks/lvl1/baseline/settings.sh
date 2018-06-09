@@ -2,15 +2,15 @@
 
 # Required generic variables
 #
-# - _ and . in the variable are ignored
-export MY_PROJECT_NAME="baseline"
-export MY_YAML_FILE="baseline.yml"
-export MY_PLATFORM="rpi2"
-export MY_LEVEL="lvl1"
+# IMPORTANT: - _ and . in the variable name are ignored so don't use them
 
-# Required data volumes on host machine
-# =====================================
-# Should map to a specific folder of the host.
-# ./ or ../ are not allowed
-#
+export MY_PROJECT_NAME="devbaseline"
+export MY_YAML_FILE="baseline.yml"
+
+source ./settings/builder.sh
+source ./settings/mysql.sh
+source ./settings/platform.sh
+source ./settings/run.sh
+source ./settings/volumes.sh
+source ./settings/level.sh
 
