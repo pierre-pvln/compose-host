@@ -12,3 +12,5 @@ source ./settings/mysql.sh
 source ./settings/platform.sh
 source ./settings/run.sh
 source ./settings/volumes.sh
+source ./settings/level.sh
+
