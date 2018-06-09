@@ -11,7 +11,7 @@ export MY_LEVEL="lvl2"
 
 
 source ./settings/bld.sh
-source ./settings/mysl.sh
+source ./settings/mysql.sh
 source ./settings/platform.sh
 source ./settings/run.sh
 source ./settings/volumas.sh
