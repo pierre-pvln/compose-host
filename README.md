@@ -1,7 +1,7 @@
 Configs en scripts for docker and docker-compose on dockerhost for various integrations and stacks
 
- dc-xxx = docker-compose shell script
- d-xxx  = docker shell script
+dc-xxx = docker-compose shell script
+d-xxx  = docker shell script
 
 Below folder structure should be present on the host which runs docker:
 a_folder\on_host     shell scripts to build and run the docker configurations
