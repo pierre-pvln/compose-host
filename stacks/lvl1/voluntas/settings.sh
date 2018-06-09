@@ -7,7 +7,7 @@
 export MY_PROJECT_NAME="devvoluntas"
 export MY_YAML_FILE="voluntas.yml"
 
-source ./settings/build.sh
+source ./settings/builder.sh
 source ./settings/mysql.sh
 source ./settings/platform.sh
 source ./settings/run.sh
