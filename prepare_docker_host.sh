@@ -3,21 +3,24 @@ myDockerDir="/home/pi/myDocker"
 
 # Check if top level folder exists if not create it
 [ ! -d "$myDockerDir" ] && mkdir -p "$myDockerDir" || echo "$myDockerDir present ..."
-#if [ ! -d "$myDockerDir" ]; then
-#  # Control will enter here if $DIRECTORY doesn't exist.
-#  mkdir -p "$myDockerDir"
-#fi
 
 # Check if SSH key exists if not create it
 [ ! -f ~/.ssh/id_rsa.pub ] && ssh-keygen -t rsa -b 4096 -C "pierre@pvln.nl" || echo "SSH key found ..."
-
-# TODO: Check if SSH key exists
-#       if not create one
-#  
 # add option to use std output file names and not ask for confirmation
 # add option to not ask for passphrase
 
-#ssh-keygen -t rsa -b 4096 -C "pierre@pvln.nl"
+# Attempts to ssh to GitHub
+if [ -n "$(ssh -T git@github.com)" ]; then
+  echo "Then condition";
+  exit
+else
+  echo "Else condition";
+  exit
+fi
+
+
+
+
 
 # TODO: Check if it possible to get access to github using the key.
 #       if not 
