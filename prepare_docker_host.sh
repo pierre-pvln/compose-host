@@ -6,8 +6,12 @@
 
 ssh-keygen -t rsa -b 4096 -C "pierre@pvln.nl"
 
-# add generated ssh key to github account
-# https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
+# TODO: Check if it possible to get access to github using the key.
+#       if not 
+#       add generated ssh key to github account
+#       https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
+
+#       if possible continue
 
 # TODO: check if git is already installed
 #       if not installed then
