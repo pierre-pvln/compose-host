@@ -10,8 +10,9 @@ myDockerDir="/home/pi/myDocker"
 # add option to not ask for passphrase
 
 # Attempts to ssh to GitHub
-if ["$(ssh -T git@github.com)"!="Permission denied (publickey)." ]; then
-   echo "Exiting, copy public key to github";
+ssh -T git@github.com
+if [ $? -ne 0 ]; then
+   echo "Exiting, first copy your public key to github account";
 #       add generated ssh key to github account
 #       https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
    exit
