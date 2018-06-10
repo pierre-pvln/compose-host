@@ -49,6 +49,7 @@ find . -name '*.sh' -type f | xargs chmod +x
 
 #
 # create folders and files for services provided through docker containers
+# folders hold the Dockerfile files
 #
 if [ ! -d "$myDockerDir"/services ]; then
   # Control will enter here if $DIRECTORY doesn't exist.
@@ -65,7 +66,8 @@ git pull origin master
 find . -name '*.sh' -type f | xargs chmod +x
 
 #
-# create folders and files for the integrations 
+# create folders and files for the integrations
+# folders hold the docker compose yaml files
 #
 if [ ! -d "$myDockerDir"/integrations ]; then
   # Control will enter here if $DIRECTORY doesn't exist.
