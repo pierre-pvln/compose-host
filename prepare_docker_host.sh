@@ -1,5 +1,5 @@
 #SETTINGS
-myDockerDir="~/myDocker"
+myDockerDir="/home/pi/myDocker"
 
 # Check if top level folder exists if not create it
 [ ! -d "$myDockerDir" ] && mkdir -p "$myDockerDir" || echo "$myDockerDir present ..."
