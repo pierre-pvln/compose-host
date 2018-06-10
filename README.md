@@ -34,6 +34,7 @@ a_folder\dev_scripts command/batch files to interact with docker host
 ssh-keygen -t rsa -b 4096 -C "pierre@pvln.nl"
 
 # add generated ssh key to github account
+# https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
 
 # TODO: check if git is already installed
 #       if not installed then
@@ -47,7 +48,7 @@ git config --global color.ui auto
 mkdir -p ~/myDocker/on_host
 cd ~/myDocker/on_host
 # Set remote
-git remote add origin git@github.com:pierre-pvln/compose-host.git
+git remote add origin git@github.com:pierre-pvln/compose-on_host.git
 # Verify new remote
 git remote -v
 git pull origin master
@@ -65,11 +66,11 @@ git pull origin master
 #set execute bit for all *.sh files
 find . -name '*.sh' -type f | xargs chmod +x
 
-mkdir -p ~/myDocker/stacks
-cd ~/myDocker/stacks
+mkdir -p ~/myDocker/integrations
+cd ~/myDocker/integrations
 git init
 # Set remote
-git remote add origin git@github.com:pierre-pvln/compose-stacks.git
+git remote add origin git@github.com:pierre-pvln/compose-integrations.git
 # Verify new remote
 git remote -v
 git pull origin master
