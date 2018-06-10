@@ -32,10 +32,7 @@ git config --global color.ui auto
 #
 # create folders and files for docker host scripts
 #
-if [ ! -d "$myDockerDir/on_host" ]; then
-  # Control will enter here if $DIRECTORY doesn't exist.
-  mkdir -p "$myDockerDir/on_host"
-fi
+[ ! -d "$myDockerDir/on_host" ] && mkdir -p "$myDockerDir/on_host" || echo "$myDockerDir/on_host present ..."
 cd "$myDockerDir/on_host"
 [ ! -d "$myDockerDir/on_host/.git" ] && git init || echo "git repository present ..."
 # Set remote
@@ -50,10 +47,7 @@ find . -name '*.sh' -type f | xargs chmod +x
 # create folders and files for services provided through docker containers
 # folders hold the Dockerfile files
 #
-if [ ! -d "$myDockerDir/services" ]; then
-  # Control will enter here if $DIRECTORY doesn't exist.
-  mkdir -p "$myDockerDir/services"
-fi
+[ ! -d "$myDockerDir/services" ] && mkdir -p "$myDockerDir/services" || echo "$myDockerDir/services present ..."
 cd "$myDockerDir/services"
 [ ! -d "$myDockerDir/services/.git" ] && git init || echo "git repository present ..."
 # Set remote
@@ -68,10 +62,7 @@ find . -name '*.sh' -type f | xargs chmod +x
 # create folders and files for the integrations
 # folders hold the docker compose yaml files
 #
-if [ ! -d "$myDockerDir/integrations" ]; then
-  # Control will enter here if $DIRECTORY doesn't exist.
-  mkdir -p "$myDockerDir/integrations"
-fi
+[ ! -d "$myDockerDir/integrations" ] && mkdir -p "$myDockerDir/integrations" || echo "$myDockerDir/integrations present ..."
 cd "$myDockerDir/integrations"
 [ ! -d "$myDockerDir/integrations/.git" ] && git init || echo "git repository present ..."
 # Set remote
@@ -85,10 +76,7 @@ find . -name '*.sh' -type f | xargs chmod +x
 #
 # create folders and files for the storage
 #
-if [ ! -d "$myDockerDir/storage" ]; then
-  # Control will enter here if $DIRECTORY doesn't exist.
-  mkdir -p "$myDockerDir/storage"
-fi
+[ ! -d "$myDockerDir/storage" ] && mkdir -p "$myDockerDir/storage" || echo "$myDockerDir/storage present ..."
 cd "$myDockerDir/storage"
 [ ! -d "$myDockerDir/storage/.git" ] && git init || echo "git repository present ..."
 # Set remote
