@@ -12,15 +12,14 @@ myDockerDir="/home/pi/myDocker"
 # Attempts to ssh to GitHub
 ssh -T git@github.com
 sshexitstatus=$?
-echo "exitstatus = $sshexitstatus"
-if [ $sshexitstatus -ne 0 ]; then
+#echo "exitstatus = $sshexitstatus"
+if [ $sshexitstatus -ne 1 ]; then
    echo "Exiting, first copy your public key to github account";
 #       add generated ssh key to github account
 #       https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
    exit
 else
    echo "SSH into github works ...";
-   exit
 fi
 
 # TODO: check if git is already installed
