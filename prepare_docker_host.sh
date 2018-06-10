@@ -6,12 +6,14 @@ myDockerDir="/home/pi/myDocker"
 
 # Check if SSH key exists if not create it
 [ ! -f ~/.ssh/id_rsa.pub ] && ssh-keygen -t rsa -b 4096 -C "pierre@pvln.nl" || echo "SSH key found ..."
-# add option to use std output file names and not ask for confirmation
-# add option to not ask for passphrase
+# TODO: add option to use std output file names and not ask for confirmation
+# TODO: add option to not ask for passphrase
 
 # Attempts to ssh to GitHub
 ssh -T git@github.com
-if [ $? -ne 0 ]; then
+sshexitstatus=$?
+echo "exitstatus = $sshexitstatus"
+if [ $sshexitstatus -ne 0 ]; then
    echo "Exiting, first copy your public key to github account";
 #       add generated ssh key to github account
 #       https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
