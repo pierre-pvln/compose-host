@@ -2,14 +2,14 @@
 myDockerDir="~/myDocker"
 
 # Check if top level folder exists if not create it
-[ ! -d "$myDockerDir" ] && mkdir -p "$myDockerDir"
+[ ! -d "$myDockerDir" ] && mkdir -p "$myDockerDir" || echo "$myDockerDir present ..."
 #if [ ! -d "$myDockerDir" ]; then
 #  # Control will enter here if $DIRECTORY doesn't exist.
 #  mkdir -p "$myDockerDir"
 #fi
 
 # Check if SSH key exists if not create it
-[ ! -f ~/.ssh/id_rsa.pub ] && echo "Not Found" || echo "Found"
+[ ! -f ~/.ssh/id_rsa.pub ] && ssh-keygen -t rsa -b 4096 -C "pierre@pvln.nl" || echo "SSH key found ..."
 
 # TODO: Check if SSH key exists
 #       if not create one
@@ -17,7 +17,7 @@ myDockerDir="~/myDocker"
 # add option to use std output file names and not ask for confirmation
 # add option to not ask for passphrase
 
-ssh-keygen -t rsa -b 4096 -C "pierre@pvln.nl"
+#ssh-keygen -t rsa -b 4096 -C "pierre@pvln.nl"
 
 # TODO: Check if it possible to get access to github using the key.
 #       if not 
@@ -38,11 +38,11 @@ git config --global color.ui auto
 #
 # create folders and files for docker host scripts
 #
-if [ ! -d "$myDockerDir"/on_host ]; then
+if [ ! -d "$myDockerDir/on_host" ]; then
   # Control will enter here if $DIRECTORY doesn't exist.
-  mkdir -p "$myDockerDir"/on_host
+  mkdir -p "$myDockerDir/on_host"
 fi
-cd "$myDockerDir"/on_host
+cd "$myDockerDir/on_host"
 # Set remote
 git remote add origin git@github.com:pierre-pvln/compose-on_host.git
 # Verify new remote
@@ -55,11 +55,11 @@ find . -name '*.sh' -type f | xargs chmod +x
 # create folders and files for services provided through docker containers
 # folders hold the Dockerfile files
 #
-if [ ! -d "$myDockerDir"/services ]; then
+if [ ! -d "$myDockerDir/services" ]; then
   # Control will enter here if $DIRECTORY doesn't exist.
-  mkdir -p "$myDockerDir"/services
+  mkdir -p "$myDockerDir/services"
 fi
-cd "$myDockerDir"/services
+cd "$myDockerDir/services"
 git init
 # Set remote
 git remote add origin git@github.com:pierre-pvln/compose-services.git
@@ -73,11 +73,11 @@ find . -name '*.sh' -type f | xargs chmod +x
 # create folders and files for the integrations
 # folders hold the docker compose yaml files
 #
-if [ ! -d "$myDockerDir"/integrations ]; then
+if [ ! -d "$myDockerDir/integrations" ]; then
   # Control will enter here if $DIRECTORY doesn't exist.
-  mkdir -p "$myDockerDir"/integrations
+  mkdir -p "$myDockerDir/integrations"
 fi
-cd "$myDockerDir"/integrations
+cd "$myDockerDir/integrations"
 git init
 # Set remote
 git remote add origin git@github.com:pierre-pvln/compose-integrations.git
@@ -90,11 +90,11 @@ find . -name '*.sh' -type f | xargs chmod +x
 #
 # create folders and files for the storage
 #
-if [ ! -d "$myDockerDir"/storage ]; then
+if [ ! -d "$myDockerDir/storage" ]; then
   # Control will enter here if $DIRECTORY doesn't exist.
-  mkdir -p "$myDockerDir"/storage
+  mkdir -p "$myDockerDir/storage"
 fi
-cd "$myDockerDir"/storage
+cd "$myDockerDir/storage"
 git init
 # Set remote
 git remote add origin git@github.com:pierre-pvln/compose-storage.git
