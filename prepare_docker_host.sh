@@ -39,6 +39,7 @@ if [ ! -d "$myDockerDir/on_host" ]; then
   mkdir -p "$myDockerDir/on_host"
 fi
 cd "$myDockerDir/on_host"
+[ ! -d "$myDockerDir/on_host/.git" ] && git init || echo "git repository present ..."
 # Set remote
 git remote add origin git@github.com:pierre-pvln/compose-on_host.git
 # Verify new remote
