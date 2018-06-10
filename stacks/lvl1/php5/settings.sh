@@ -8,8 +8,8 @@ export MY_PROJECT_NAME="devphp5"
 export MY_YAML_FILE="php5.yml"
 
 source ./settings/builder.sh
-source ./settings/mysql.sh
 source ./settings/platform.sh
-source ./settings/run.sh
-source ./settings/volumes.sh
+source ./settings/container.sh
 source ./settings/level.sh
+source ./settings/volumes.sh
+source ./settings/mysql.sh
