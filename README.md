@@ -14,7 +14,7 @@ a_folder\on_host       shell scripts to build and run the docker configurations 
 
 Below folder structure should be present on the workstation on which development is done:
 ```
-a_folder\dev_scripts command/batch files to interact with docker host
+a_folder\dev_scripts   command/batch files to interact with docker host
         \secrets       secrets not to be put on github
         \on_host       shell scripts to build and run the docker configurations (OR YOU SHOULD BE HERE)
         \services      folder with the various configurations of services    
