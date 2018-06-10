@@ -8,6 +8,9 @@ myDockerDir="~/myDocker"
 #  mkdir -p "$myDockerDir"
 #fi
 
+# Check if SSH key exists if not create it
+[ ! -f ~/.ssh/id_rsa.pub ] && echo "Not Found" || echo "Found"
+
 # TODO: Check if SSH key exists
 #       if not create one
 #  
