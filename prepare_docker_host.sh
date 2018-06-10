@@ -29,8 +29,6 @@ git config --global user.name Pierre Veelen
 git config --global user.email pierre@pvln.nl
 git config --global color.ui auto
 
-#       otherwise start here
-
 #
 # create folders and files for docker host scripts
 #
@@ -48,9 +46,6 @@ git pull origin master
 #set execute bit for all *.sh files
 find . -name '*.sh' -type f | xargs chmod +x
 
-exit
-
-
 #
 # create folders and files for services provided through docker containers
 # folders hold the Dockerfile files
@@ -60,7 +55,7 @@ if [ ! -d "$myDockerDir/services" ]; then
   mkdir -p "$myDockerDir/services"
 fi
 cd "$myDockerDir/services"
-git init
+[ ! -d "$myDockerDir/services/.git" ] && git init || echo "git repository present ..."
 # Set remote
 git remote add origin git@github.com:pierre-pvln/compose-services.git
 # Verify new remote
@@ -78,7 +73,7 @@ if [ ! -d "$myDockerDir/integrations" ]; then
   mkdir -p "$myDockerDir/integrations"
 fi
 cd "$myDockerDir/integrations"
-git init
+[ ! -d "$myDockerDir/integrations/.git" ] && git init || echo "git repository present ..."
 # Set remote
 git remote add origin git@github.com:pierre-pvln/compose-integrations.git
 # Verify new remote
@@ -95,7 +90,7 @@ if [ ! -d "$myDockerDir/storage" ]; then
   mkdir -p "$myDockerDir/storage"
 fi
 cd "$myDockerDir/storage"
-git init
+[ ! -d "$myDockerDir/storage/.git" ] && git init || echo "git repository present ..."
 # Set remote
 git remote add origin git@github.com:pierre-pvln/compose-storage.git
 # Verify new remote
