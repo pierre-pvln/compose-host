@@ -47,6 +47,9 @@ git pull origin master
 #set execute bit for all *.sh files
 find . -name '*.sh' -type f | xargs chmod +x
 
+exit
+
+
 #
 # create folders and files for services provided through docker containers
 # folders hold the Dockerfile files
