@@ -11,5 +11,5 @@ source ./settings/builder.sh
 source ./settings/platform.sh
 source ./settings/container.sh
 source ./settings/level.sh
-source ./settings/mysql.sh
 source ./settings/volumes.sh
+source ./settings/mysql.sh
