@@ -28,4 +28,4 @@ a_folder\dev_scripts   command/batch files to interact with docker host
 ./prepare_docker_host.sh
 ```
 
-This script creates the nessesacry folders and files to be able to get it working
+This script creates the necessary folders and files to be able to get it working
