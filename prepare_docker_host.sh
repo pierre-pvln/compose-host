@@ -1,6 +1,13 @@
 #SETTINGS
 myDockerDir="~/myDocker"
 
+# Check if top level folder exists if not create it
+[ ! -d "$myDockerDir" ] && mkdir -p "$myDockerDir"
+#if [ ! -d "$myDockerDir" ]; then
+#  # Control will enter here if $DIRECTORY doesn't exist.
+#  mkdir -p "$myDockerDir"
+#fi
+
 # TODO: Check if SSH key exists
 #       if not create one
 #  
@@ -15,12 +22,6 @@ ssh-keygen -t rsa -b 4096 -C "pierre@pvln.nl"
 #       https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
 
 #       if possible continue
-
-# create top level folder
-if [ ! -d "$myDockerDir" ]; then
-  # Control will enter here if $DIRECTORY doesn't exist.
-  mkdir -p "$myDockerDir"
-fi
 
 # TODO: check if git is already installed
 #       if not installed then
