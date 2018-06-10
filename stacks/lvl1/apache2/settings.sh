@@ -8,9 +8,8 @@ export MY_PROJECT_NAME="devapache2"
 export MY_YAML_FILE="apache2.yml"
 
 source ./settings/builder.sh
-source ./settings/mysql.sh
 source ./settings/platform.sh
-source ./settings/run.sh
-source ./settings/volumes.sh
+source ./settings/container.sh
 source ./settings/level.sh
-
+source ./settings/mysql.sh
+source ./settings/volumes.sh
