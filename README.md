@@ -33,6 +33,7 @@ The script prepares the folder structure, connects them to GitHub and pulls the 
 ```shell
 # remove old versions
 sudo apt-get remove docker docker-engine docker.io
+cd ~/myDocker
 # get the convenience script 
 curl -fsSL get.docker.com -o get-docker.sh
 # and run it
