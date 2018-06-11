@@ -48,7 +48,3 @@ sudo usermod -aG docker pi
 ```
 
 Remember that you will have to log out and back in for this to take effect!
-```script
-sudo reboot now
-```
-
