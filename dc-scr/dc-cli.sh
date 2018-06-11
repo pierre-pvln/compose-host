@@ -1,12 +1,16 @@
 #!/bin/bash
 #
 # Required environment variables:
-#    ${MY_PROJECT_NAME} = the name of the project
 #    ${MY_YAML_FILE}    = path to the YAML file including YAML file name
 #    ${MY_LEVEL}        = the level of the stack/integration (lvl1, lvl2, lvl3)
+#    ${MY_ASSUMED_CONTAINER} = the name of the container you want to access on cli
 
-echo docker-compose --project-name ${MY_PROJECT_NAME} --file ../../../../integrations/${MY_LEVEL}/${MY_YAML_FILE} exec /bin/bash
+echo "UNDER INVESTIGATION" 
+echo " DOES NOT WORK YET"
+exit
 
-docker-compose --project-name ${MY_PROJECT_NAME} \
-               --file ../../../../integrations/${MY_LEVEL}/${MY_YAML_FILE} \
-               exec /bin/bash
+echo docker-compose --file ../../../../integrations/${MY_LEVEL}/${MY_YAML_FILE} exec ${MY_ASSUMED_CONTAINER} /bin/bash
+
+docker-compose --file ../../../../integrations/${MY_LEVEL}/${MY_YAML_FILE} \
+               exec ${MY_ASSUMED_CONTAINER} \
+               /bin/bash

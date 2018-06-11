@@ -2,4 +2,5 @@
 
 source ./settings.sh
 
-source ../../../dc-scr/dc-cli.sh
+# using docker commands instead of docker-compose 
+source ../../../d-scr/d-cli.sh

@@ -7,6 +7,8 @@
 export MY_PROJECT_NAME="devapache2"
 export MY_YAML_FILE="apache2.yml"
 
+export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_apache2server_1"
+
 source ./settings/builder.sh
 source ./settings/platform.sh
 source ./settings/container.sh
