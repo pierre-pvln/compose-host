@@ -7,9 +7,20 @@
 export MY_PROJECT_NAME="devmysql"
 export MY_YAML_FILE="mysql.yml"
 
+export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_mysql_1"												 
 source ./settings/builder.sh
 source ./settings/platform.sh
 source ./settings/container.sh
 source ./settings/level.sh
-source ./settings/volumes.sh
+
+# Settings for data web-volume
+source ./settings/vol_www.sh
+
+# Settings for data ftp-volume
+#source ./settings/vol_ftp.sh
+
+# settings for data  mysql volume 
+source ./settings/vol_mysql.sh
+
+# additional mysql settings
 source ./settings/mysql.sh
