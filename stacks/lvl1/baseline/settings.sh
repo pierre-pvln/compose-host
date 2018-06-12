@@ -15,7 +15,7 @@ source ./settings/container.sh
 source ./settings/level.sh
 
 # Settings for data web-volume
-source ./settings/vol_www.sh
+#source ./settings/vol_www.sh
 
 # Settings for data ftp-volume
 #source ./settings/vol_ftp.sh
