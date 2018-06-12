@@ -9,6 +9,7 @@ export MY_YAML_FILE="voluntas.yml"
 
 export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_voluntas_1"												 
 
+# Generic settings for the build / container
 source ./settings/builder.sh
 source ./settings/platform.sh
 source ./settings/container.sh
@@ -24,4 +25,5 @@ source ./settings/vol_www.sh
 source ./settings/vol_mysql.sh
 
 # additional mysql settings
-source ./settings/mysql.sh							  
+source ./settings/mysql.sh
+						  
