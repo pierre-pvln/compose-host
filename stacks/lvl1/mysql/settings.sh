@@ -6,6 +6,7 @@
 
 export MY_PROJECT_NAME="devmysql"
 export MY_YAML_FILE="mysql.yml"
+export MY_DOCKERFILE="Dockerfile"
 
 export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_mysql_1"												 
 source ./settings/builder.sh
