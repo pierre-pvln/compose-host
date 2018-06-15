@@ -6,6 +6,7 @@
 
 export MY_PROJECT_NAME="devbaseline"
 export MY_YAML_FILE="baseline.yml"
+export MY_DOCKERFILE="Dockerfile"
 
 export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_baseline_1"
 
