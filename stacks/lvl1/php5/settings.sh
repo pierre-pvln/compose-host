@@ -6,7 +6,7 @@
 
 export MY_PROJECT_NAME="devphp5"
 export MY_YAML_FILE="php5.yml"
-export MY_DOCKERFILE="Dockerfile-php5"
+export MY_DOCKERFILE="Dockerfile-clean"
 
 echo $MY_DOCKERFILE
 
