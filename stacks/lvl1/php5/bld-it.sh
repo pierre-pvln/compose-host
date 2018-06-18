@@ -4,9 +4,7 @@ MY_LOG_FOLDER="./logs"
 
 # Do not use in a piped construction, otherwise vaiable settings are lost
 # so:
-#
 #   source ./settings.sh 2>&1 | tee -a $MY_LOG_FILE
-#
 # does not work !
 #
 source ./settings.sh
