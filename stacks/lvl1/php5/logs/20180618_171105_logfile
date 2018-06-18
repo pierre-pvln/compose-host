@@ -1,0 +1,3 @@
+========
+Running: docker-compose --project-name devphp5 --file ../../../../integrations/lvl1/php5.yml build --no-cache
+========
