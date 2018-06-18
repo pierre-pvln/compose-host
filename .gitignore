@@ -27,7 +27,7 @@ Thumbs.db
 ##
 # logging files
 ##
-
+*.log
 
 ##
 # info files
