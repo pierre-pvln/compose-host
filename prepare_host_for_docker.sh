@@ -1,12 +1,11 @@
 #SETTINGS
-myDockerDir="/home/pi/myDocker"
+myDockerDir=$HOME"/myDocker"
 
 # Check if top level folder exists if not create it
 [ ! -d "$myDockerDir" ] && mkdir -p "$myDockerDir" || echo "$myDockerDir present ..."
 
 # Check if SSH key exists if not create it
-[ ! -f ~/.ssh/id_rsa.pub ] && ssh-keygen -t rsa -b 4096 -C "pierre@pvln.nl" || echo "SSH key found ..."
-# TODO: add option to use std output file names and not ask for confirmation
+[ ! -f ~/.ssh/id_rsa.pub ] && ssh-keygen -f $HOME/.ssh/id_rsa -t rsa -b 4096 -C "pierre@pvln.nl" || echo "SSH key found ..."
 # TODO: add option to not ask for passphrase
 
 # Attempts to ssh to GitHub
