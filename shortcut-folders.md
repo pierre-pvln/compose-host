@@ -1,5 +1,5 @@
 ## Create folder structure on Linux host
-Get the script file <br>
+Get the script file "prepare_host_for_docker.sh" <br>
 ```shell
 
 cd ~
