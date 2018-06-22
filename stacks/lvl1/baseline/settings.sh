@@ -14,6 +14,7 @@ source ./settings/builder.sh
 source ./settings/platform.sh
 source ./settings/container.sh
 source ./settings/level.sh
+source ./settings/version.sh
 
 # Settings for data web-volume
 #source ./settings/vol_www.sh
