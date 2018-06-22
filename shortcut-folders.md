@@ -1,4 +1,4 @@
-## Create foldor structure on Linux host
+## Create folder structure on Linux host
 Get the script file <br>
 ```shell
 
