@@ -22,11 +22,20 @@ a_folder\dev_scripts   command/batch files to interact with docker host
         \storage       folder with volumes used to store data
 ```
 
-## Prepare folders and connect to GitHub
+## Step 1: Prepare folders and connect to GitHub
 The script prepares the folder structure, connects them to GitHub and pulls the files.
 
 ```shell
 ./prepare_host_for_docker.sh
 ```
 
-Now install docker on the host
+## Step 2: Install Docker
+Now install docker on the host.<br>
+See instructions in file install_docker_on_@@@.md
+
+## Step 3: Install Docker-compose
+Install docker-compose on the host
+
+```shell
+./install_docker-compose.sh
+```
