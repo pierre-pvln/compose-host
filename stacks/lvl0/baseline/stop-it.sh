@@ -2,4 +2,4 @@
 
 source ./settings.sh
 
-source ../../../dc-scr/dc-log.sh
+source ../../../d-scr/d-stop.sh

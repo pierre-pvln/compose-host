@@ -4,10 +4,10 @@
 #    ${MY_CONTAINER_NAME}  = name of the container (baseline)
 
 echo ===========
-echo Log start
+echo Stop start
 echo
 echo ========
-echo Running: docker log ${MY_CONTAINER_NAME}
+echo Running: docker stop ${MY_CONTAINER_NAME}
 echo 
 
-docker logs ${MY_CONTAINER_NAME}
+docker stop ${MY_CONTAINER_NAME}

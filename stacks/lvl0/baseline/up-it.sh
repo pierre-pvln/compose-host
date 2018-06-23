@@ -2,4 +2,4 @@
 
 source ./settings.sh
 
-source ../../../dc-scr/dc-up.sh
+source ../../../d-scr/d-run.sh

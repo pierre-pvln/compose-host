@@ -1,7 +1,9 @@
 
-Generic scripts for docker-compose
+Generic scripts for docker commands
 
-Required environment variables:
-- ${MY_PROJECT_NAME} = the name of the project 
-- ${MY_YAML_FILE}    = path to the YAML file including YAML file name
-- ${MY_LEVEL}        = the level of the stack/integration (lvl1, lvl2, lvl3)
+Required generic environment variables:
+- ${MY_BUILDER}         = the name of the builder (pvln)
+- ${MY_PLATFORM}        = type of platform to build it for (rpi3)
+- ${MY_LEVEL}           = building level (should be lvl0)
+- ${MY_CONTAINER_NAME}  = name of the container (baseline)
+- ${MY_VERSION}         = version (1.0)

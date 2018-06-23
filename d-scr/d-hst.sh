@@ -1,6 +1,23 @@
 #!/bin/bash
+#
+# Required generic environment variables:
+#    ${MY_BUILDER}         = the name of the builder (pvln)
+#    ${MY_PLATFORM}        = type of platform to build it for (rpi3)
+#    ${MY_LEVEL}           = building level (should be lvl0)
+#    ${MY_CONTAINER_NAME}  = name of the container (baseline)
+#    ${MY_VERSION}         = version (1.0)
 
-# reads and executes commands from filename in the current shell environment
-source ./settings/bld.sh
+echo ===========
+echo History start
+echo
+echo ========
+echo Running: docker history --human --no-trunc ${MY_BUILDER}/${MY_PLATFORM}-${MY_LEVEL}-${MY_CONTAINER_NAME}:${MY_VERSION}
+echo 
 
-docker history --human --no-trunc $my_build_name
+# relevant build options
+#
+# --human      Print sizes and dates in human readable format
+# --no-trunc   Don’t truncate output
+#
+docker history --human --no-trunc \
+       ${MY_BUILDER}/${MY_PLATFORM}-${MY_LEVEL}-${MY_CONTAINER_NAME}:${MY_VERSION}
