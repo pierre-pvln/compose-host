@@ -1,9 +1,9 @@
 Folder holding Level 1 Integration files
 ========================================
 
-##	Single service in 1 container
+##	Single service in 1 container (using docker)
 
-Using docker 
+Using docker <br>
 Level 0 = Single service in 1 container<br>
 <br>
 Using docker-compose<br>
