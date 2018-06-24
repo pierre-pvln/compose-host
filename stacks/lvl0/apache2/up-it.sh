@@ -1,5 +1,5 @@
 #!/bin/bash
-MY_DEFAULT_DATA_OVERRIDE="YES"
+MY_DEFAULT_DATA_OVERRIDE="NO"
 
 # Get relevant settings
 #
@@ -21,4 +21,4 @@ else
 
 fi
 
-source ../../../dC-scr/dc-run.sh
+source ../../../d-scr/d-run.sh
