@@ -1,7 +1,7 @@
-Folder holding Level 3 Integration files
+Folder holding Level 4 Integration files
 ========================================
 
-##	Multiple containers creating 1 service (using docker-compose)
+##	Containers spread over network (using docker-compose)
 
 __Using docker__<br>
 Level 0 = Single service in 1 container<br>

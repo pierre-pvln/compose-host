@@ -1,14 +1,15 @@
 Folder holding Level 1 Integration files
 ========================================
 
-##	Single service in 1 container (using docker)
+##	Single service in 1 container (using docker-compose)
 
-Using docker <br>
+__Using docker__<br>
 Level 0 = Single service in 1 container<br>
 <br>
-Using docker-compose<br>
+__Using docker-compose__<br>
 Level 1 = Single service in 1 container <br>
-Level 2 = Multiple services in 1 container or multiple containers creating 1 service<br> 
-Level 3 = Containers spread over network
+Level 2 = Multiple services in 1 container <br>
+Level 3 = Multiple containers creating 1 service<br> 
+Level 4 = Containers spread over network
 
 Docker-compose.yml file and Dockerfile are the main configuration elements.
