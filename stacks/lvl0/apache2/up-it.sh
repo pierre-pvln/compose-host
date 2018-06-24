@@ -21,4 +21,14 @@ else
 
 fi
 
-source ../../../d-scr/d-run.sh
+#source ../../../d-scr/d-run.sh
+echo ===========
+echo Run
+echo
+echo ===========
+echo Running: docker run -it --name ${MY_CONTAINER_NAME} --expose 80:80 ${MY_BUILDER}/${MY_PLATFORM}-${MY_LEVEL}-${MY_CONTAINER_NAME}:${MY_VERSION}
+echo
+docker run -it \
+       --name ${MY_CONTAINER_NAME} \
+	   --expose 80:80 \
+       ${MY_BUILDER}/${MY_PLATFORM}-${MY_LEVEL}-${MY_CONTAINER_NAME}:${MY_VERSION}
