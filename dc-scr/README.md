@@ -1,5 +1,5 @@
 
-Generic scripts for docker-compose commands
+Generic scripts for __docker-compose__ commands
 
 Required generic environment variables:
 - ${MY_PROJECT_NAME} = the name of the project
