@@ -1,7 +1,7 @@
 Folder holding Level 0 Integration files
 ========================================
 
-##	Single service in 1 container
+##	Single service in 1 container (using docker)
 
 __Using docker__<br>
 Level 0 = Single service in 1 container<br>
