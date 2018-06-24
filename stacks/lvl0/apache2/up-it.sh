@@ -43,6 +43,8 @@ then
     docker run -it \
        --name ${MY_CONTAINER_NAME} \
        -p 80:80 \
+       -v $MY_WEB_DATA_VOLUME:/var/www/html \
+       -v $MY_WEB_LOG_VOLUME:/var/log/apache2 \
        ${MY_BUILDER}/${MY_PLATFORM}-${MY_LEVEL}-${MY_CONTAINER_NAME}:${MY_VERSION}
 else
     echo Container ${MY_CONTAINER_NAME} not found
