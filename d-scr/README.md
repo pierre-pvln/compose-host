@@ -1,5 +1,5 @@
 
-Generic scripts for docker commands
+Generic scripts for __docker__ commands
 
 Required generic environment variables:
 - ${MY_BUILDER}         = the name of the builder (pvln)
