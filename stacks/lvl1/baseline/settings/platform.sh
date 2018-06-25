@@ -15,32 +15,32 @@ MY_PLATFORM=""
 # VERSION_ID="$(. /etc/*-release; echo ${VERSION_ID/*, /})"
 #
 MY_OS_ID="$(. /etc/*-release; echo ${ID/*, /})""$(. /etc/*-release; echo ${VERSION_ID/*, /})"
-MY_MACHINE="$(unmame -m)"
+MY_MACHINE="$(uname -m)"
 
-case $MY_MACHINE in
-	armv71)
-		echo "Raspberry Pi 3"
-		MY_PLATFORM='rpi3'
-		;;
-	x86_64)
-		echo "64 bits system"
-        case $MY_OS_ID in
-        ubuntu16.04)
-            echo "Ubuntu 16.04"
-            MY_PLATFORM='ubuntu16.04'
-            ;;
-        ubuntu14.04)
-            echo "Ubuntu 14.04"
-            MY_PLATFORM='ubuntu14.04'
-            ;;
+case ${MY_MACHINE} in
+    armv7l)
+        echo "Running on Raspberry Pi 3"
+        MY_PLATFORM='rpi3'
+        ;;
+    x86_64)
+        echo "Running on 64 bits system"
+        case ${MY_OS_ID} in
+            ubuntu16.04)
+                echo "Ubuntu 16.04"
+                MY_PLATFORM='ubuntu16.04'
+                ;;
+            ubuntu14.04)
+                echo "Ubuntu 14.04"
+                MY_PLATFORM='ubuntu14.04'
+                ;;
 	    *)
-		    echo "Unknown type"${MY_OS_ID}
-		    ;;
-        esac      
-		;;
-	*)
-		echo "Unknown type"${MY_MACHINE}
-		;;
+                echo "Unknown OS: "${MY_OS_ID}
+                ;;
+        esac
+        ;;
+    *)
+        echo "Unknown machine: "${MY_MACHINE}
+        ;;
 esac
 
 export MY_PLATFORM
@@ -48,4 +48,3 @@ export MY_PLATFORM
 echo "==============="
 echo "Platform:      " $MY_PLATFORM
 echo "==============="
-
