@@ -21,4 +21,6 @@ else
 
 fi
 
-source ../../../dc-scr/dc-run.sh
+#Create and start containers
+#
+source ../../../dc-scr/dc-up.sh
