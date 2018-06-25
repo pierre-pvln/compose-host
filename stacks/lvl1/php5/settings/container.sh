@@ -9,8 +9,7 @@ MY_CONTAINER_NAME=""
 if [ -z ${MY_CONTAINER_NAME} ] 
 then
    MY_START_FOLDER="$PWD"
-   echo $MY_START_FOLDER
-   cd ..
+   cd .
    MY_CONTAINER_NAME="${PWD##*/}"
    cd "$MY_START_FOLDER"
 fi
