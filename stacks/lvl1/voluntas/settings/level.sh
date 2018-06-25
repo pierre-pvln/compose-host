@@ -1,7 +1,7 @@
 #!/bin/bash
 
 MY_START_FOLDER="$PWD"
-cd ../..
+cd ..
 export MY_LEVEL="${PWD##*/}"
 
 cd "$MY_START_FOLDER"

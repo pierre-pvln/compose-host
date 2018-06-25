@@ -3,5 +3,5 @@
 export MY_VERSION='1.0'
 
 echo "==============="
-echo "Containerlevel:" $MY_VERSION
+echo "Containerversion:" $MY_VERSION
 echo "==============="
