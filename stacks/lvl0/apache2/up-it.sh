@@ -5,6 +5,8 @@ MY_DEFAULT_DATA_OVERRIDE="YES"
 #
 source ./settings.sh
 
+# Add/override data
+#
 if [ -f ./default_data.sh ]
 then
    if [ ${MY_DEFAULT_DATA_OVERRIDE} == "YES" ]
@@ -15,13 +17,10 @@ then
    else
       echo "No default data override"
    fi
-
 else
    echo "./default_data.sh not present"
-
 fi
 
-#source ../../../d-scr/d-run.sh
 echo ===========
 echo Run
 echo
@@ -33,12 +32,12 @@ then
     echo Container ${MY_CONTAINER_NAME} found
     if [ "$(docker ps -aq -f status=exited -f status=created -f name=${MY_CONTAINER_NAME})" ]
 	then
-        echo Container status exited or created
+        echo Container status exited or created; so we have to remove it first
         # cleanup container first
         docker rm ${MY_CONTAINER_NAME}
     fi
 
-	echo Running: docker run -it --name ${MY_CONTAINER_NAME} -p 80:80 ${MY_BUILDER}/${MY_PLATFORM}-${MY_LEVEL}-${MY_CONTAINER_NAME}:${MY_VERSION}
+    echo Running: docker run -it --name ${MY_CONTAINER_NAME} -p 80:80 -v $MY_WEB_DATA_VOLUME:/var/www/html -v $MY_WEB_LOG_VOLUME:/var/log/apache2 ${MY_BUILDER}/${MY_PLATFORM}-${MY_LEVEL}-${MY_CONTAINER_NAME}:${MY_VERSION}
     echo
     docker run -it \
        --name ${MY_CONTAINER_NAME} \

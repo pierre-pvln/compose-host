@@ -71,17 +71,3 @@ git remote -v
 git pull origin master
 #set execute bit for all *.sh files
 find . -name '*.sh' -type f | xargs chmod +x
-
-#
-# create folders and files for the storage
-#
-[ ! -d "$myDockerDir/storage" ] && mkdir -p "$myDockerDir/storage" || echo "$myDockerDir/storage present ..."
-cd "$myDockerDir/storage"
-[ ! -d "$myDockerDir/storage/.git" ] && git init || echo "git repository present ..."
-# Set remote
-git remote add origin git@github.com:pierre-pvln/compose-storage.git
-# Verify new remote
-git remote -v
-git pull origin master
-#set execute bit for all *.sh files
-find . -name '*.sh' -type f | xargs chmod +x

@@ -19,7 +19,6 @@ a_folder\dev_scripts   command/batch files to interact with docker host
         \on_host       shell scripts to build and run the docker configurations (OR YOU SHOULD BE HERE) 
         \services      folder with the various configurations of services    
         \integrations  folder with the docker compose yaml files
-        \storage       folder with volumes used to store data
 ```
 
 ## Step 1: Prepare folders and connect to GitHub
