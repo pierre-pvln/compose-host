@@ -7,7 +7,7 @@
 export MY_PROJECT_NAME="devphp5"
 export MY_YAML_FILE="php5.yml"
 #export MY_DOCKERFILE="Dockerfile-clean"
-export MY_DOCKERFILE="Dockerfile_v002"
+export MY_DOCKERFILE="Dockerfile_short"
 
 export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_php5service_1"
 

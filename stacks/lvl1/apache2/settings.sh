@@ -7,7 +7,7 @@
 export MY_PROJECT_NAME="devapache2"
 export MY_YAML_FILE="apache2.yml"
 #export MY_DOCKERFILE="Dockerfile"
-export MY_DOCKERFILE="Dockerfile_v002"
+export MY_DOCKERFILE="Dockerfile_short"
 
 export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_apache2server_1"
 
