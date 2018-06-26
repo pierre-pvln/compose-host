@@ -7,7 +7,7 @@
 export MY_PROJECT_NAME="devmysql"
 export MY_YAML_FILE="mysql_5.5.yml"
 #export MY_DOCKERFILE="Dockerfile-clean"
-export MY_DOCKERFILE="Dockerfile_v002"
+export MY_DOCKERFILE="Dockerfile_short"
 
 export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_mysqlserver_1"
 
