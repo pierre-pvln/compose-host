@@ -9,7 +9,7 @@ export MY_YAML_FILE="voluntas.yml"
 #export MY_DOCKERFILE="Dockerfile"
 export MY_DOCKERFILE="Dockerfile_short"
 
-export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_voluntas_1"
+export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_voluntasservice_1"
 
 # Generic settings for the build / container
 source ./settings/builder.sh
