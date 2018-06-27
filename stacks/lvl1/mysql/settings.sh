@@ -11,6 +11,7 @@ export MY_DOCKERFILE="Dockerfile_short"
 
 export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_mysqlserver_1"
 
+# Generic settings for the build / container
 source ./settings/builder.sh
 source ./settings/platform.sh
 source ./settings/container.sh
