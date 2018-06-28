@@ -11,10 +11,13 @@ MY_PLATFORM=""
 #
 # inspiration: https://askubuntu.com/questions/450298/how-to-get-ubuntu-distributions-full-code-name
 #
-#         ID="$(. /etc/*-release; echo ${ID/*, /})"
-# VERSION_ID="$(. /etc/*-release; echo ${VERSION_ID/*, /})"
+#         ID="$(/bin/bash <(cat /etc/os-release; echo 'echo ${ID/*, /}'))"
+# VERSION_ID="$(/bin/bash <(cat /etc/os-release; echo 'echo ${VERSION_ID/*, /}'))"
 #
-MY_OS_ID="$(. /etc/*-release; echo ${ID/*, /})""$(. /etc/*-release; echo ${VERSION_ID/*, /})"
+#MY_OS_ID="$(. /etc/*-release; echo ${ID/*, /})""$(. /etc/*-release; echo ${VERSION_ID/*, /})"
+
+MY_OS_ID="$(bash <(cat /etc/os-release; echo 'echo ${ID/*, /}'))""$(bash <(cat /etc/os-release; echo 'echo ${VERSION_ID/*, /}'))"
+
 MY_MACHINE="$(uname -m)"
 
 case ${MY_MACHINE} in
