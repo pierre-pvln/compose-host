@@ -14,7 +14,7 @@ MY_PLATFORM=""
 #         ID="$(. /etc/*-release; echo ${ID/*, /})"
 # VERSION_ID="$(. /etc/*-release; echo ${VERSION_ID/*, /})"
 #
-MY_OS_ID="$(. /etc/*-release; echo ${ID/*, /})""$(. /etc/*-release; echo ${VERSION_ID/*, /})"
+MY_OS_ID=$(. /etc/*-release; echo ${ID/*, /})  #$(. /etc/*-release; echo ${VERSION_ID/*, /})
 MY_MACHINE="$(uname -m)"
 
 case ${MY_MACHINE} in
@@ -24,6 +24,7 @@ case ${MY_MACHINE} in
         ;;
     x86_64)
         echo "Running on 64 bits system"
+        echo ${MY_OS_ID}
         case ${MY_OS_ID} in
             ubuntu16.04)
                 echo "Ubuntu 16.04"
