@@ -2,7 +2,7 @@
 LOG_ALSO_TO_FILE="YES"
 MY_LOG_FOLDER="./logs"
 
-# Do not use in a piped construction, otherwise vaiable settings are lost
+# Do not use in a piped construction, otherwise variable settings are lost
 # so:
 #   source ./settings.sh 2>&1 | tee -a $MY_LOG_FILE
 # does not work !
