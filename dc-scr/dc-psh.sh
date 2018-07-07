@@ -31,4 +31,5 @@ then
     exit
 else
     echo "Pushing image succeeded ..."
+    docker logout
 fi
