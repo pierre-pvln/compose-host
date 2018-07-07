@@ -14,7 +14,6 @@ MY_PLATFORM=""
 #         ID="$(/bin/bash <(cat /etc/os-release; echo 'echo ${ID/*, /}'))"
 # VERSION_ID="$(/bin/bash <(cat /etc/os-release; echo 'echo ${VERSION_ID/*, /}'))"
 #
-
 MY_OS_ID="$(bash <(cat /etc/os-release; echo 'echo ${ID/*, /}'))""$(bash <(cat /etc/os-release; echo 'echo ${VERSION_ID/*, /}'))"
 
 MY_MACHINE="$(uname -m)"
