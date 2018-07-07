@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Required generic environment variables:
-#    ${MY_PROJECT_NAME} = the name of the project 
+#    ${MY_PROJECT_NAME} = the name of the project
 #    ${MY_YAML_FILE}    = path to the YAML file including YAML file name
 #    ${MY_LEVEL}        = the level of the stack/integration (lvl1, lvl2, lvl3)
 
@@ -16,7 +16,7 @@ docker-compose --project-name ${MY_PROJECT_NAME} \
 retval=$?
 if [ $retval -ne 0 ]
 then
-    echo "File validation failed ..." 
+    echo "File validation failed ..."
     echo "Return value was: "$retval
     exit
 else
@@ -40,10 +40,9 @@ docker-compose --project-name ${MY_PROJECT_NAME} \
 retval=$?
 if [ $retval -ne 0 ]
 then
-    echo "Building failed ..." 
+    echo "Building failed ..."
     echo "Return value was: "$retval
     exit
 else
     echo "Building succeeded ..."
 fi
-
