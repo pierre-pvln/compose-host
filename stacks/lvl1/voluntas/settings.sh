@@ -18,11 +18,21 @@ source ./settings/container.sh
 source ./settings/level.sh
 source ./settings/version.sh
 
+# Setting the homedir; needed for the volume mappings
+case ${MY_PLATFORM} in
+    rpi3)
+	    export MY_HOMEDIR="/home/pi"
+        ;;
+    ubuntu16.04)
+	    export MY_HOMEDIR="/home/tester"
+        ;;
+    *)
+        echo "Unknown platform: "${MY_PLATFORM}
+        ;;
+esac
+
 # Settings for data web-volume
 source ./settings/vol_www.sh
-
-# Settings for data ftp-volume
-#source ./settings/vol_ftp.sh
 
 # settings for data  mysql volume 
 source ./settings/vol_mysql.sh

@@ -15,15 +15,3 @@ source ./settings/platform.sh
 source ./settings/container.sh
 source ./settings/level.sh
 source ./settings/version.sh
-
-# Settings for data web-volume
-#source ./settings/vol_www.sh
-
-# Settings for data ftp-volume
-#source ./settings/vol_ftp.sh
-
-# settings for data  mysql volume 
-#source ./settings/vol_mysql.sh
-
-# additional mysql settings
-#source ./settings/mysql.sh
