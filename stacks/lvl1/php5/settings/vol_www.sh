@@ -5,14 +5,14 @@
 # Should map to a specific folder of the host.
 # ./ or ../ are not allowed
 
-export MY_WEB_DATA_VOLUME=$MY_HOMEDIR'/myStorage/www/html'
+export MY_WEB_DATA_VOLUME=$MY_HOMEDIR'/myStorage/php5/html'
 if [ ! -d "$MY_WEB_DATA_VOLUME" ]; then
   # Will enter here if $MY_WEB_DATA_VOLUME doesn't exist.
   mkdir -p $MY_WEB_DATA_VOLUME
   echo $MY_WEB_DATA_VOLUME "created on docker host ..."
 fi
 
-export MY_WEB_LOG_VOLUME=$MY_HOMEDIR'/myStorage/www/log'
+export MY_WEB_LOG_VOLUME=$MY_HOMEDIR'/myStorage/php5/log'
 if [ ! -d "$MY_WEB_LOG_VOLUME" ]; then
   # Will enter here if $MY_WEB_LOG_VOLUME doesn't exist.
   mkdir -p $MY_WEB_LOG_VOLUME
