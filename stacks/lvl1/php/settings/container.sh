@@ -2,7 +2,7 @@
 
 # explicitly set a containername
 #
-MY_CONTAINER_NAME=""
+MY_CONTAINER_NAME="php_5.6"
 
 # or let folder structure define it
 #
