@@ -4,12 +4,12 @@
 #
 # IMPORTANT: - _ and . in the variable name are ignored so don't use them
 
-export MY_PROJECT_NAME="devphp5"
-export MY_YAML_FILE="php5.yml"
+export MY_PROJECT_NAME="devphp_5.6"
+export MY_YAML_FILE="php_5.6.yml"
 #export MY_DOCKERFILE="Dockerfile-clean"
 export MY_DOCKERFILE="Dockerfile_short"
 
-export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_php5service_1"
+export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_php_5.6service_1"
 
 # Generic settings for the build / container
 source ./settings/builder.sh
