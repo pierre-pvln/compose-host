@@ -36,6 +36,7 @@ echo "List all the docker volumes for: "${MY_PROJECT_NAME}
 echo "================================ "
 #docker volume ls -q --filter=name=${MY_PROJECT_NAME}*
 MY_VOLUMELIST=$(docker volume ls -q --filter=name=${MY_PROJECT_NAME}*)
+echo ${MY_VOLUMELIST}
 
 if [ ! -z ${MY_VOLUMELIST} ]
 then
@@ -48,4 +49,3 @@ else
    echo "Volumes already removed"
    echo "================================ "
 fi
-
