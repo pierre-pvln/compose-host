@@ -2,7 +2,7 @@
 
 # explicitly set a containername
 #
-MY_CONTAINER_NAME="mysql_5.5"
+MY_CONTAINER_NAME="mysql_5.7"
 
 # or let folder structure define it
 #

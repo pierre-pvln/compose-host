@@ -9,7 +9,7 @@ export MY_YAML_FILE="apache2.yml"
 #export MY_DOCKERFILE="Dockerfile"
 export MY_DOCKERFILE="Dockerfile_short"
 
-export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_apache2server_1"
+export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_apache2service_1"
 
 # Generic settings for the build / container
 source ./settings/builder.sh
@@ -30,6 +30,6 @@ case ${MY_PLATFORM} in
         echo "Unknown platform: "${MY_PLATFORM}
         ;;
 esac
-		
+
 # Settings for data web-volume
 source ./settings/vol_www.sh

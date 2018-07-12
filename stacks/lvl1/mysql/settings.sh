@@ -5,11 +5,11 @@
 # IMPORTANT: - _ and . in the variable name are ignored so don't use them
 
 export MY_PROJECT_NAME="devmysql"
-export MY_YAML_FILE="mysql_5.5.yml"
+export MY_YAML_FILE="mysql_5.7.yml"
 #export MY_DOCKERFILE="Dockerfile-clean"
 export MY_DOCKERFILE="Dockerfile_short"
 
-export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_mysql55service_1"
+export MY_ASSUMED_CONTAINER=$MY_PROJECT_NAME"_mysql57service_1"
 
 # Generic settings for the build / container
 source ./settings/builder.sh
