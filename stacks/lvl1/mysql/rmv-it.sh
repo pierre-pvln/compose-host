@@ -9,7 +9,10 @@ echo "================================ "
 #docker ps -a --filter=name=${MY_PROJECT_NAME}*
 MY_CONTAINERLIST=$(docker ps -a -q --filter=name=${MY_PROJECT_NAME}*)
 
-if [ ! -z ${MY_CONTAINERLIST} ]
+# add quotes around ${MY_CONTAINERLIST} otherwise it might be seen as more than one word/arguments
+# which will lead to "[: too many arguments" error.
+# 
+if [ ! -z "${MY_CONTAINERLIST}" ]
 then
    echo
    echo "Stop the following containers:   "${MY_CONTAINERLIST}
@@ -36,9 +39,11 @@ echo "List all the docker volumes for: "${MY_PROJECT_NAME}
 echo "================================ "
 #docker volume ls -q --filter=name=${MY_PROJECT_NAME}*
 MY_VOLUMELIST=$(docker volume ls -q --filter=name=${MY_PROJECT_NAME}*)
-echo ${MY_VOLUMELIST}
 
-if [ ! -z ${MY_VOLUMELIST} ]
+# add quotes around ${MY_VOLUMELIST} otherwise it might be seen as more than one word/arguments
+# which will lead to "[: too many arguments" error.
+# 
+if [ ! -z "${MY_VOLUMELIST}" ]
 then
    echo
    echo "And remove them"
