@@ -9,7 +9,7 @@ echo "================================ "
 #docker ps -a --filter=name=${MY_PROJECT_NAME}*
 MY_CONTAINERLIST=$(docker ps -a -q --filter=name=${MY_PROJECT_NAME}*)
 
-if [ ! -z ${MY_CONTAINERLIST} ]
+if [ ! -z "${MY_CONTAINERLIST}" ]
 then
    echo
    echo "Stop the following containers:   "${MY_CONTAINERLIST}
@@ -38,7 +38,7 @@ echo "================================ "
 MY_VOLUMELIST=$(docker volume ls -q --filter=name=${MY_PROJECT_NAME}*)
 echo ${MY_VOLUMELIST}
 
-if [ ! -z ${MY_VOLUMELIST} ]
+if [ ! -z "${MY_VOLUMELIST}" ]
 then
    echo
    echo "And remove them"
