@@ -5,7 +5,7 @@
 # IMPORTANT: - _ and . in the variable name are ignored so don't use them
 
 export MY_PROJECT_NAME="devmysql_57"
-export MY_YAML_FILE="mysql_5.7_tst1.yml"
+export MY_YAML_FILE="mysql_5.7.yml"
 #export MY_DOCKERFILE="Dockerfile-clean"
 export MY_DOCKERFILE="Dockerfile_short"
 
