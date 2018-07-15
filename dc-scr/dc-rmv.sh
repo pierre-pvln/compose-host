@@ -1,8 +1,11 @@
 #!/bin/bash
 #
 # Required environment variables:
-#    ${MY_PROJECT_NAME} = the name of the project
-		   
+#    ${MY_PROJECT_NAME}      = the name of the project
+#    ${MY_WEB_DATA_VOLUME}   = the folder holding the webserver files
+#    ${MY_WEB_LOG_VOLUMEE}   = the folder holding the webserver log files
+#    ${MY_MYSQL_DATA_VOLUME} = the folder holding the MySQL files
+
 echo
 echo "List all the container id's for: "${MY_PROJECT_NAME}
 echo "================================ "
@@ -12,7 +15,7 @@ MY_CONTAINERLIST=$(docker ps -a -q --filter=name=${MY_PROJECT_NAME}*)
 
 # add quotes around ${MY_CONTAINERLIST} otherwise it might be seen as more than one word/arguments
 # which will lead to "[: too many arguments" error.
-# 
+#
 if [ ! -z "${MY_CONTAINERLIST}" ]
 then
    echo
@@ -42,7 +45,7 @@ MY_VOLUMELIST=$(docker volume ls -q --filter=name=${MY_PROJECT_NAME}*)
 
 # add quotes around ${MY_VOLUMELIST} otherwise it might be seen as more than one word/arguments
 # which will lead to "[: too many arguments" error.
-# 
+#
 if [ ! -z "${MY_VOLUMELIST}" ]
 then
    echo
@@ -54,3 +57,9 @@ else
    echo "Volumes already removed"
    echo "================================ "
 fi
+
+echo "And finally removing the data on the docker host manualy"
+echo "================================ "
+echo "sudo rm -R ${MY_WEB_DATA_VOLUME}"
+echo "sudo rm -R ${MY_WEB_LOG_VOLUME}"
+echo "sudo rm -R ${MY_MYSQL_DATA_VOLUME}"

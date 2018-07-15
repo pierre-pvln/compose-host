@@ -1,8 +1,11 @@
 #!/bin/bash
 #
-# -- SHOULD ONLY BE USED FOR TESTING A CONTAINER OR SERVICE ! --
+# -- ! SHOULD ONLY BE USED FOR TESTING A CONTAINER OR SERVICE ! --
 #
-# To start a container/service use: ./up-it.sh 
+# This script is used to enter the service/container in command line mode for testing purposes
+#
+# To start a container/service use: ./up-it.sh
+# If command line access is needed in a started container use ./cli-it.sh 
 #
 MY_DEFAULT_DATA_OVERRIDE="YES"
 
